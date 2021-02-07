@@ -17,7 +17,8 @@ import javax.annotation.Resource;
 @RestController
 @Slf4j
 public class OrderController {
-    public static final String PAYMENT_URL="http://localhost:8001";
+    //public static final String PAYMENT_URL="http://localhost:8001";   //服务端单机
+    public static final String PAYMENT_URL="http://CLOUD-PAYMENT-SERVICE";   //服务端集群，在eureka中注册的微服务名称，通过负载均衡分配
 
     @Resource
     private RestTemplate restTemplate;

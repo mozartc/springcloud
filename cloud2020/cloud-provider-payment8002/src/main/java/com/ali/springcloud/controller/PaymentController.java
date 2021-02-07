@@ -40,7 +40,7 @@ public class PaymentController {
         log.info("*****查询结果："+payment);
 
         if(payment != null){
-            return new CommonResult(200,"查询数据库成功,serverPort"+serverPort,payment);
+            return new CommonResult(200,"查询数据库成功,serverPort:"+serverPort,payment);
         }else{
             return new CommonResult(400,"查询数据库失败,id:"+id,null);
         }
